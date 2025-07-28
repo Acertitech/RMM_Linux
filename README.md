@@ -36,8 +36,11 @@ Este script tem como objetivo aplicar uma configuração de segurança básica e
      - Permite ping apenas deste IP
      - Bloqueia ping de qualquer outro IP
      - Remove o serviço SSH do acesso público
+       
+4. Instala o **RMM Agent**:
+     - Site Acerti VPS 
 
-4. Finaliza:
+5. Finaliza:
    - Recarrega as regras do `firewalld`
    - Desativa o firewall `ufw` (se estiver ativo)
    - Recarrega os daemons do `systemd`
@@ -49,4 +52,7 @@ Este script tem como objetivo aplicar uma configuração de segurança básica e
 1. Copie o script para um arquivo, por exemplo:
 
 ```bash
-nano padroniza_vps.sh
+sudo chmod +x install_agent.sh
+sudo chmod +x padroniza_vps.sh
+sudo ./padroniza_vps.sh
+sudo ./install_agent.sh
